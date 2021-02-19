@@ -1,0 +1,276 @@
+body{
+  font-family: 'Helvetica', 'Georgia' sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; 
+  background-color: white;
+}
+
+h1{
+  font-size: 28pt;
+  text-align: center;
+  line-height: 2;
+  font-weight: normal;
+  color: #4d4d4d;
+  font-family: 'Georgia';
+}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Georgia';
+}
+
+p {
+  padding: 0 30px;
+  font-size: 14pt;
+  font-weight: lighter;
+  color: #4d4d4d;
+  line-height: 22px;
+}
+
+.page1 {
+  padding: 20px;
+}
+
+#mode{
+  margin: 0 30px 0 0;
+  text-align: center;
+}
+#commentsec{
+  text-align: center;
+  font-size: 1 em;
+  padding: 0 0 30px 0;
+}
+#ad-comment{
+  font-size: 16px;
+  text-align: center;
+  color:orange;
+}
+
+/*skip to content interaction setting*/
+a{
+  font-size: 14pt;
+  font-weight: lighter;
+}
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -30px;
+  -webkit-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: #0883C9;
+  text-decoration-style: solid;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  margin: auto auto 0;
+}
+footer p{
+  color: white;
+  font-size: 12pt;
+}
+
+/*logo XYH for animation*/
+
+@-webkit-keyframes logo_wiggle{
+  0%{
+    width: 10px;
+  }
+  100%{
+    width: 92px;
+  }
+}
+
+@keyframes logo_wiggle{
+  0%{
+    width: 10px;
+  }
+  100%{
+    width: 92px;
+  }
+} 
+
+#logo{
+  animation-name: logo_wiggle;
+  animation-duration: 4s;
+  animation-iteration-count:1 ;
+  padding: 10px;
+}
+
+/* Gallery for index page & photos page*/
+.gallery{
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.gallery p{
+  padding: 0 30px;
+  width: 300px;
+  font-size: 12pt;
+}
+.gallery img{
+  margin: 10px;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.gallery #image1{
+  margin: 0 auto 30px;
+}
+
+/* Navbar */
+header{
+  background: black;
+  border-bottom: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 20px;
+
+}
+
+.nav_item {
+  padding:10px;
+}
+
+.nav_item a{
+  color: white;
+  text-decoration: none;
+}
+
+.nav_item a:hover, a:focus{
+  color: #0883C9;
+  text-decoration: underline;
+  font-weight: bold;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+
+/*current page navigation insight*/
+#current{
+  background-color:#0883C9;
+  border-radius: 5px;
+}
+#cur{
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+#current a:hover,a:focus{
+  color: white;
+  text-emphasis: bold;
+  -webkit-text-decoration-style: solid;
+  text-decoration-style: solid;
+
+}
+
+/*photo page gallery*/
+.page_photos{
+  background: black;
+}
+.page_photos img:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.gallery_photos{
+  min-height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.page_photos h2{
+  color: white;
+}
+.gallery_photos img{
+  margin: 10px;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+
+
+
+@media screen and (min-width: 850px){
+
+  header{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .nav_links{
+    flex-direction: row;
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+  .gallery{
+    flex-direction: row;
+  }
+
+  .gallery p{
+    padding: 0 30px;
+    width: 500px;
+    font-size: 14pt;
+  }
+
+  .gallery #image1{
+    margin: 0 30px 30px;
+  }
+
+}
+
+@media screen and (min-width: 600px)and (max-width:850px) { 
+  header{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .nav_links{
+    flex-direction: row;
+  }
+  
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #logo{
+    animation: none;
+ }
+}
